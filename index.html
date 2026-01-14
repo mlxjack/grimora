@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>Grimora | Alquimia Digital & Performance</title>
+  <title>Grimora | Estratégia, Branding & Performance</title>
 
-  <meta name="description" content="Grimora: onde criatividade encontra performance. Branding místico, sites encantadores e tráfego que funciona." />
+  <meta name="description" content="Grimora: onde criatividade encontra performance. Branding forte, sites que convertem e tráfego que funciona." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,9 +14,9 @@
   <style>
     :root{
       /* Paleta Mística Contemporânea */
-      --bg-deep:#05020a; /* Quase preto, levemente violeta */
-      --accent-1:#bd00ff; /* Roxo Mágico */
-      --accent-2:#00eaff; /* Ciano Etéreo */
+      --bg-deep:#05020a;
+      --accent-1:#bd00ff; /* Roxo */
+      --accent-2:#00eaff; /* Ciano */
       --text-main:#ffffff;
       --text-muted:rgba(255,255,255,0.7);
       
@@ -101,7 +101,7 @@
     a{text-decoration:none;color:inherit}
     ul{list-style:none;padding:0;margin:0}
 
-    /* Tipografia com Degradê Mágico */
+    /* Tipografia com Degradê */
     h1,h2,h3{
       font-family:var(--font-display);
       font-weight:600;
@@ -116,7 +116,7 @@
       display: inline-block;
     }
 
-    h1{font-size:clamp(2.8rem,5vw,4.8rem);line-height:1.04}
+    h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.04}
     h2{font-size:clamp(1.9rem,3vw,2.65rem)}
     h3{font-size:1.45rem; color:#fff;}
 
@@ -140,6 +140,37 @@
     .grid{display:grid;gap:24px}
     .cols-2{grid-template-columns:1fr 1fr}
     .cols-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+    /* Grid para Logos Pequenos - CORRIGIDO */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .logo-item {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      height: 120px; /* Altura fixa para alinhar */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      overflow: hidden;
+    }
+    .logo-item:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-2);
+    }
+    .logo-item img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* GARANTE QUE NÃO DISTORCE */
+    }
 
     @media(max-width:900px){ .cols-2{grid-template-columns:1fr} }
 
@@ -205,14 +236,14 @@
       100% { filter: brightness(100) drop-shadow(0 0 40px rgba(0, 234, 255, 0.5)); }
     }
 
-    /* Botões Místicos */
+    /* Botões */
     .btn{
       position:relative;
       padding:14px 30px;
       font-size:13px;
       text-transform:uppercase;
       letter-spacing:1px;
-      border-radius:50px; /* Mais arredondado */
+      border-radius:50px; 
       font-weight:700;
       display:inline-flex;
       align-items:center;
@@ -255,6 +286,7 @@
       transition: all .4s ease;
       position:relative;
       overflow:hidden;
+      height: 100%;
     }
     .card-glass:hover{
       border-color: rgba(255,255,255,0.3);
@@ -283,6 +315,7 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .kicker{ margin-top: 20px; display: flex; gap: 8px; flex-wrap: wrap; }
     .kicker .pill{
       border:1px solid rgba(255,255,255,0.1);
       background: rgba(0,0,0,0.2);
@@ -291,6 +324,23 @@
       padding: 5px 12px;
       font-size: 11px;
       font-family: var(--font-code);
+    }
+
+    /* ESTILOS DOS LOGOS - CORRIGIDO */
+    .case-logo {
+      height: 70px; /* Um pouco maior */
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      margin-bottom: 22px;
+      display: block;
+      /* Removi o filter: brightness(100) que estava estourando as imagens */
+    }
+    
+    /* CLASSE MÁGICA PARA LOGOS COM FUNDO PRETO */
+    .blend-screen {
+      mix-blend-mode: screen; /* Torna o preto transparente */
+      border-radius: 6px;
     }
 
     /* Monitor / Orbe de Dados */
@@ -356,7 +406,7 @@
       .hero-grid{grid-template-columns:1fr; gap:30px;}
       .hero-logo-img{ height: 80px; }
       .monitor{ display:none; }
-      h1{ font-size: 2.8rem; }
+      h1{ font-size: 2.5rem; }
     }
   </style>
 </head>
@@ -377,8 +427,9 @@
       </a>
       <nav>
         <a href="#agencia" data-link>Agência</a>
-        <a href="#servicos" data-link>Magia</a>
-        <a href="#processo" data-link>Processo</a>
+        <a href="#cases" data-link>Cases</a>
+        <a href="#portfolio" data-link>Portfólio</a>
+        <a href="#servicos" data-link>Expertise</a>
         <a href="#contato" data-link>Contato</a>
       </nav>
     </div>
@@ -393,58 +444,124 @@
           </div>
 
           <div class="mono reveal delay-1" style="margin-bottom:20px;">
-            ✦ Digital Alchemy & Performance
+            ✦ Branding • Performance • Web
           </div>
 
           <h1 class="reveal delay-2">
-            Transformamos Ideias em <span class="gradient-text">Ouro Digital.</span>
+            Design que Impressiona.<br>
+            <span class="gradient-text">Estratégia que Vende.</span>
           </h1>
 
           <p class="reveal delay-3" style="color:rgba(255,255,255,0.8); max-width:540px; margin: 24px 0 35px; font-size:1.15rem;">
-            A Grimora combina a estética da arte com a ciência dos dados. 
-            Branding místico, sites imersivos e tráfego preciso para quem busca mais do que o comum.
+            A Grimora organiza a casa. Transformamos empresas comuns em marcas desejadas com identidade visual forte, sites rápidos e tráfego que traz retorno. Sem enrolação.
           </p>
 
           <div class="btns reveal delay-3">
             <a class="btn btn-primary" href="#contato">
-              Iniciar Ritual
+              Vamos conversar
             </a>
-            <a class="btn btn-outline" href="#servicos">
-              Ver Grimório
+            <a class="btn btn-outline" href="#cases">
+              Ver Cases
             </a>
           </div>
         </div>
 
         <div class="monitor reveal delay-2">
-          <span style="color:var(--accent-2);">grimora@spellbook</span>:~$ cast_growth<br><br>
-          <span style="opacity:0.7">Target:</span> <span style="color:#fff;">Seu Negócio</span><br>
-          <span style="opacity:0.7">Mana:</span> <span style="color:#a6ffbf;">100%</span><br><br>
+          <span style="color:var(--accent-2);">grimora@admin</span>:~$ status_projeto<br><br>
+          <span style="opacity:0.7">Foco:</span> <span style="color:#fff;">Escala & Resultado</span><br>
+          <span style="opacity:0.7">Status:</span> <span style="color:#a6ffbf;">ATIVO</span><br><br>
           
           <div style="margin-left:15px; border-left:1px solid rgba(255,255,255,0.2); padding-left:15px;">
-             [+] Summoning Branding... <span style="color:var(--accent-1)">Complete</span><br>
-             [+] Weaving Website... <span style="color:var(--accent-1)">Complete</span><br>
-             [+] Amplifying Ads... <span style="color:var(--accent-1)">Active</span>
+             [+] Branding ........... <span style="color:var(--accent-1)">OK</span><br>
+             [+] Site/Landing ....... <span style="color:var(--accent-1)">OK</span><br>
+             [+] Meta Ads ........... <span style="color:var(--accent-1)">RODANDO</span>
           </div>
           <br>
-          <span class="mono" style="animation:blink 1s infinite">_Awaiting command...</span>
+          <span class="mono" style="animation:blink 1s infinite">_Próximo passo: Análise de Métricas</span>
         </div>
       </div>
     </section>
 
     <section id="agencia">
       <div class="wrap" style="text-align:center;">
-        <span class="mono reveal">Filosofia Arcana</span>
-        <h2 class="reveal delay-1" style="margin:15px 0;">O poder do <span class="gradient-text">Invisível</span></h2>
+        <span class="mono reveal">Nossa Abordagem</span>
+        <h2 class="reveal delay-1" style="margin:15px 0;">O Básico <span class="gradient-text">Bem Feito</span></h2>
         
         <p class="reveal delay-2" style="max-width:800px; margin:0 auto; color:rgba(255,255,255,0.75); font-size:1.1rem;">
-          No mundo digital, a mágica acontece quando o usuário não percebe o esforço. 
-          Um design que encanta, uma copy que hipnotiza e uma estratégia que funciona nos bastidores.
-          Nós não fazemos truques; nós construímos autoridade.
+          Não vendemos "truques" de algoritmo. Acreditamos em consistência. 
+          Uma marca bem posicionada passa confiança. Um site otimizado não perde vendas. 
+          E um tráfego bem segmentado traz o cliente certo. Simples assim.
         </p>
         
         <div class="quote reveal delay-3" style="margin-top:40px; text-align:left; max-width:800px; margin-inline:auto;">
-          “Qualquer tecnologia suficientemente avançada é indistinguível de magia.”
+          “Design constrói valor. Dados constroem crescimento.”
         </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="wrap">
+        <div class="section-head" style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 40px; padding-bottom: 20px;">
+          <div>
+            <h2 class="reveal">Cases de Sucesso</h2>
+            <p class="reveal delay-1">Marcas que ajudamos a transformar em referência.</p>
+          </div>
+        </div>
+
+        <div class="grid cols-2">
+          <div class="card-glass reveal">
+            <img src="https://cdn.shopify.com/s/files/1/0454/5845/6736/files/CHUMBADA-OFICIAL.png?v=1756760093" alt="Chumbada Oficial" class="case-logo">
+            <h3>Chumbada Oficial</h3>
+            <p style="color:rgba(255,255,255,0.7)">
+              A Chumbada Oficial é uma marca de pesca esportiva que cresceu com foco em posicionamento e consistência visual. 
+              A Grimora atuou na construção da identidade e estrutura de marketing, transformando a marca em referência no segmento, com presença forte no digital e relacionamento sólido com lojistas (B2B).
+            </p>
+            <div class="kicker">
+              <span class="pill">Branding</span>
+              <span class="pill">B2B</span>
+              <span class="pill">Digital</span>
+            </div>
+          </div>
+
+          <div class="card-glass reveal delay-1">
+            <img src="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-quadrado-fundo-preto_88de8c17-ab4f-4ac5-bd31-09e2a251e6c6.png?v=1756218817" alt="Dhera Brand" class="case-logo blend-screen">
+            <h3>Dhera Brand</h3>
+            <p style="color:rgba(255,255,255,0.7)">
+              Marca de moda feminina com identidade elegante e propósito claro. 
+              A Grimora estruturou o branding e os canais digitais, criando uma imagem coerente e profissional. 
+              O resultado foi o fortalecimento da percepção de valor e o impulsionamento das vendas online.
+            </p>
+            <div class="kicker">
+              <span class="pill">Moda</span>
+              <span class="pill">E-commerce</span>
+              <span class="pill">Identidade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" style="padding-top: 50px;">
+      <div class="wrap">
+        <span class="mono reveal">Portfólio Criativo</span>
+        <h2 class="reveal delay-1">Marcas que Criamos</h2>
+        
+        <div class="logo-grid reveal delay-2">
+          <div class="logo-item"><img src="https://i.postimg.cc/4710rpn4/logo1.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/JDQF9jtH/logo2.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/G8jfZv9j/logo3.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/7GNRpSbb/logo4.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/dk9fzGDn/logo5.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/34ZqP2Wg/logo6.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/1V5dP4N0/logo7.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/8fPYDsrm/logo8.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/Pvr7hN84/logo9.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/fSTPZk0v/logo10.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/kRXH9DtT/logo11.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/JH4FmtBd/logo12.png" alt="Logo Cliente"></div>
+          <div class="logo-item"><img src="https://i.postimg.cc/CnL2YdfX/logo13.png" alt="Logo Cliente"></div>
+        </div>
+        <p class="mono" style="margin-top:20px; text-align:right; opacity:0.6">* Imagens ilustrativas do portfólio</p>
       </div>
     </section>
 
@@ -452,8 +569,8 @@
       <div class="wrap">
         <div class="section-head" style="border-bottom-color:rgba(255,255,255,0.1);">
           <div>
-            <h2 class="reveal">Nosso Grimório</h2>
-            <p class="reveal delay-1">As três disciplinas essenciais para a dominação digital.</p>
+            <h2 class="reveal">O Que Fazemos</h2>
+            <p class="reveal delay-1">Três pilares essenciais para crescer no digital.</p>
           </div>
         </div>
 
@@ -462,35 +579,35 @@
             <div class="card-num">I</div>
             <h3>Identidade Visual</h3>
             <p style="color:rgba(255,255,255,0.6)">
-              Forjamos a alma da sua marca. Logos, cores e elementos visuais que contam uma história e criam seguidores leais.
+              Criamos a cara da sua empresa. Logos, cores e manuais de marca que transmitem profissionalismo e autoridade desde o primeiro contato.
             </p>
             <div class="kicker">
+              <span class="pill">Logo</span>
               <span class="pill">Branding</span>
-              <span class="pill">Alma</span>
             </div>
           </div>
 
           <div class="card-glass reveal delay-1">
             <div class="card-num">II</div>
-            <h3>Tráfego & Ads</h3>
+            <h3>Tráfego Pago</h3>
             <p style="color:rgba(255,255,255,0.6)">
-              A arte de estar em todo lugar. Gerenciamos orçamentos no Meta e Google para atrair as pessoas certas para o seu feitiço.
+              Colocamos sua marca na frente de quem quer comprar. Gestão de anúncios no Meta e Google com foco em ROI e otimização constante.
             </p>
             <div class="kicker">
+              <span class="pill">Ads</span>
               <span class="pill">Performance</span>
-              <span class="pill">Alcance</span>
             </div>
           </div>
 
           <div class="card-glass reveal delay-2">
             <div class="card-num">III</div>
-            <h3>Web & Portais</h3>
+            <h3>Sites & Web</h3>
             <p style="color:rgba(255,255,255,0.6)">
-              Construímos templos digitais. Sites rápidos, bonitos e preparados para converter visitantes em clientes.
+              Landing pages de alta conversão e sites institucionais rápidos. Preparamos o terreno para você receber o cliente e fechar negócio.
             </p>
             <div class="kicker">
               <span class="pill">Dev</span>
-              <span class="pill">UX/UI</span>
+              <span class="pill">Landing Page</span>
             </div>
           </div>
         </div>
@@ -500,13 +617,13 @@
     <section id="contato" style="text-align:center;">
       <div class="wrap">
         <div class="card-glass reveal" style="max-width:800px; margin:0 auto; background: linear-gradient(180deg, rgba(20,10,30,0.6), rgba(5,2,10,0.8));">
-          <h2 style="margin-bottom:20px;">Pronto para a Transformação?</h2>
+          <h2 style="margin-bottom:20px;">Pronto para escalar?</h2>
           <p style="margin-bottom:30px; color:rgba(255,255,255,0.7);">
-            Não precisa de Bola de Cristal. Basta enviar uma mensagem explicando seu projeto e nós mostraremos o caminho.
+            Mande um e-mail contando sobre o seu projeto (nicho, objetivo e o que você precisa agora). Vamos traçar um plano prático.
           </p>
           
           <a class="btn btn-primary" href="mailto:publicidadegrimora@gmail.com?subject=Grimora%20-%20Novo%20Projeto">
-            Invocar Grimora
+            Solicitar Proposta
           </a>
         </div>
       </div>
@@ -516,8 +633,8 @@
 
   <footer>
     <div class="wrap" style="display:flex; justify-content:space-between; opacity:0.6;">
-      <span class="mono">GRIMORA ARCANE AGENCY</span>
-      <span class="mono">© 2026</span>
+      <span class="mono">GRIMORA AGENCY</span>
+      <span class="mono">© 2026 • SÃO PAULO</span>
     </div>
   </footer>
 
@@ -533,7 +650,6 @@
     });
 
     function animateCursor() {
-      // Suavização do movimento (Lerp)
       cursorX += (mouseX - cursorX) * 0.1;
       cursorY += (mouseY - cursorY) * 0.1;
       
