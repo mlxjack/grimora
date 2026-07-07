@@ -71,28 +71,57 @@
         </div>
 
         <div class="hero-graphic reveal delay-200">
-          <div class="tech-dashboard">
-            <div class="tech-header">
-              <div class="dots">
-                <div class="dot dot-red"></div>
-                <div class="dot dot-yellow"></div>
-                <div class="dot dot-green"></div>
+          <div class="dashboard-mockup">
+            <div class="db-header">
+              <div class="db-title-group">
+                <span class="db-dot"></span>
+                <span class="db-title">Métricas de Campanha</span>
               </div>
-              <span style="font-size: 0.75rem; opacity: 0.5;">grimora_system_monitor.sh</span>
+              <span class="db-badge">Ao Vivo</span>
             </div>
-            <div class="tech-content">
-              <div class="tech-line">> <span class="highlight">grimora@terminal:</span> status_geral_agencia</div>
-              <div class="tech-line">Status: <span style="color: var(--accent-green);">ATIVO & EXECUTANDO</span></div>
-              <div class="tech-line">Campanhas Rodando: <span style="color: #fff;">18 Ativas</span></div>
-              <div class="tech-line">LPs Online: <span style="color: #fff;">100% de Uptime</span></div>
-              <div class="tech-line">Taxa de Conversão Média: <span style="color: var(--accent-cyan);" class="pulse">4.82%</span></div>
-              <div class="tech-line" style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 15px; padding-top: 15px;">
-                > <span class="highlight">performance_metrics:</span>
+            
+            <div class="db-metrics-grid">
+              <div class="db-metric-card">
+                <span class="db-metric-label">ROI Médio</span>
+                <span class="db-metric-value">4.2x</span>
+                <span class="db-metric-trend db-trend-up">▲ +14%</span>
               </div>
-              <div class="tech-line">[-] ROI Médio Google/Meta Ads: <span style="color: var(--accent-green);">4.2x</span></div>
-              <div class="tech-line">[-] CTR Médio Criativos: <span style="color: var(--accent-cyan);">3.8%</span></div>
-              <div class="tech-line">[-] Velocidade dos Sites: <span style="color: var(--accent-green);">98/100 Mobile Score</span></div>
-              <div class="tech-line" style="margin-top: 15px; animation: blink 1s infinite;">_ Aguardando novas integrações...</div>
+              <div class="db-metric-card">
+                <span class="db-metric-label">Conversão</span>
+                <span class="db-metric-value">4.8%</span>
+                <span class="db-metric-trend db-trend-up">▲ +8.2%</span>
+              </div>
+            </div>
+
+            <div class="db-chart-container">
+              <svg viewBox="0 0 400 150" class="db-chart-svg">
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--accent-purple)" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="var(--accent-purple)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid Lines -->
+                <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
+                <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
+                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
+                
+                <!-- Chart Area Path -->
+                <path d="M 0 130 C 60 110, 100 50, 160 60 C 220 70, 260 20, 320 30 C 360 35, 380 15, 400 10 L 400 150 L 0 150 Z" fill="url(#chartGradient)"/>
+                
+                <!-- Chart Line Path -->
+                <path d="M 0 130 C 60 110, 100 50, 160 60 C 220 70, 260 20, 320 30 C 360 35, 380 15, 400 10" fill="none" stroke="var(--accent-purple)" stroke-width="3" stroke-linecap="round"/>
+                
+                <!-- Dots on key nodes -->
+                <circle cx="160" cy="60" r="5" fill="var(--accent-purple)" stroke="#ffffff" stroke-width="2"/>
+                <circle cx="320" cy="30" r="5" fill="var(--accent-purple)" stroke="#ffffff" stroke-width="2"/>
+                <circle cx="400" cy="10" r="5" fill="var(--accent-cyan)" stroke="#ffffff" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <div class="db-footer">
+              <span class="db-footer-txt">Faturamento Gerado: <strong>R$ 124.500</strong></span>
+              <span class="db-footer-txt" style="color: var(--accent-green); font-weight:600;">Meta Atingida</span>
             </div>
           </div>
         </div>
@@ -111,13 +140,13 @@
             <img src="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-quadrado-fundo-preto_88de8c17-ab4f-4ac5-bd31-09e2a251e6c6.png?v=1756218817" alt="Dhera Brand Logo">
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.2rem; opacity: 0.4; letter-spacing: -0.05em; font-weight: 800;">LUMINA</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #0f766e; letter-spacing: -0.03em;">Lumina</h3>
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.2rem; opacity: 0.4; letter-spacing: -0.05em; font-weight: 800;">VERTEX</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #1d4ed8; letter-spacing: -0.03em;">Vertex</h3>
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.2rem; opacity: 0.4; letter-spacing: -0.05em; font-weight: 800;">KAIZEN</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #c2410c; letter-spacing: -0.03em;">Kaizen</h3>
           </div>
         </div>
       </div>

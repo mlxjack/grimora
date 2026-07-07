@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Design Tokens - Premium Light & Clean */
@@ -17,7 +17,7 @@
   --border-glass: rgba(15, 23, 42, 0.08);
   --border-active: rgba(79, 70, 229, 0.25);
   
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Playfair Display', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
@@ -637,12 +637,13 @@ p {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(1) brightness(0.2) opacity(0.35); /* Darken brand logos on light bg */
+  opacity: 0.75;
   transition: var(--transition-smooth);
 }
 
 .brand-item:hover img {
-  filter: grayscale(0) brightness(0.8) opacity(0.95);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Reveal Animations on Scroll */
@@ -670,63 +671,127 @@ p {
   align-items: center;
 }
 
-.tech-dashboard {
+/* Dashboard Mockup - Premium clean graphics */
+.dashboard-mockup {
   width: 100%;
-  max-width: 500px;
-  background: rgba(13, 13, 17, 0.9);
-  border: 1px solid rgba(79, 70, 229, 0.2);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15), 0 0 50px rgba(79, 70, 229, 0.05);
+  max-width: 480px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.06), 0 5px 15px rgba(15, 23, 42, 0.02);
   border-radius: var(--radius-lg);
-  padding: 30px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: #a1a1aa;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   position: relative;
   overflow: hidden;
+  text-align: left;
 }
 
-.tech-header {
+.db-header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 20px;
+  align-items: center;
 }
 
-.dots {
+.db-title-group {
   display: flex;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
 }
 
-.dot {
+.db-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
 }
 
-.dot-red { background-color: #ff5f56; }
-.dot-yellow { background-color: #ffbd2e; }
-.dot-green { background-color: #27c93f; }
-
-.tech-content {
-  line-height: 2;
+.db-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
 }
 
-.tech-line {
-  margin-bottom: 10px;
+.db-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  background: rgba(79, 70, 229, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
 }
 
-.highlight {
-  color: var(--accent-cyan);
+.db-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
-.pulse {
-  animation: pulse-glow 2s infinite alternate;
+.db-metric-card {
+  background: rgba(15, 23, 42, 0.01);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
 }
 
-@keyframes pulse-glow {
-  0% { opacity: 0.6; }
-  100% { opacity: 1; text-shadow: 0 0 10px var(--accent-cyan); }
+.db-metric-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.db-metric-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.db-metric-trend {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.db-trend-up {
+  color: var(--accent-green);
+}
+
+.db-chart-container {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.db-chart-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.db-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.db-footer-txt strong {
+  color: var(--text-primary);
 }
 
 /* Form Styles */
