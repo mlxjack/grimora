@@ -51,77 +51,43 @@
   <!-- Hero Section -->
   <main>
     <section class="section hero" style="min-height: 95vh; display: flex; align-items: center; padding-top: 150px;">
-      <div class="container grid-2">
+      <div class="container grid-2" style="align-items: center; gap: 60px;">
         <div class="reveal">
-          <span class="text-mono">✦ Branding • Performance • Web</span>
-          <h1 style="margin-top: 15px;">
-            Construímos <span class="gradient-text">Marcas Fortes.</span><br>
-            Aceleramos <span class="gradient-text-alt">Resultados.</span>
+          <span class="text-mono" style="color: var(--text-secondary); margin-bottom: 20px; display: block; letter-spacing: 0.1em;">✦ AGÊNCIA PREMIUM</span>
+          <h1 style="font-size: clamp(3.2rem, 6vw, 5rem); line-height: 1.05; margin-bottom: 24px; font-weight: 500; letter-spacing: -0.02em;">
+            Marcas <span class="text-serif-italic">fortes.</span><br>
+            Resultados <span class="text-serif-italic">claros.</span>
           </h1>
-          <p style="margin-bottom: 40px; font-size: 1.15rem; max-width: 580px;">
-            A Grimora é uma agência de comunicação de ponta. Unimos o rigor dos dados de tráfego à sofisticação de identidades de alto valor e sites ultra velozes. Sem atalhos, focando na excelência corporativa.
+          <p style="margin-bottom: 40px; font-size: 1.15rem; max-width: 580px; color: var(--text-secondary); font-weight: 300;">
+            A Grimora eleva negócios ao patamar de líderes de mercado através de identidades de luxo e estratégias agressivas de tráfego.
           </p>
           <div class="btn-group">
-            <a href="contato.html" class="btn btn-primary">
-              Iniciar briefing
+            <a href="contato.html" class="btn btn-primary" style="background: #ffffff; color: #000000; border: none; font-weight: 600;">
+              Iniciar projeto
               <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="cases.html" class="btn btn-outline">Ver cases</a>
+            <a href="cases.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.15); color: #ffffff;">Explorar cases</a>
           </div>
         </div>
 
-        <div class="hero-graphic reveal delay-200">
-          <div class="dashboard-mockup">
-            <div class="db-header">
-              <div class="db-title-group">
-                <span class="db-dot"></span>
-                <span class="db-title">Métricas de Campanha</span>
-              </div>
-              <span class="db-badge">Ao Vivo</span>
+        <div class="hero-graphic reveal delay-200" style="perspective: 1000px;">
+          <div class="bento-grid" style="transform: rotateY(-8deg) rotateX(5deg); transform-style: preserve-3d;">
+            <div class="bento-card" style="grid-column: span 12; padding: 30px; min-height: 180px; transform: translateZ(20px);">
+              <span class="text-mono" style="font-size: 0.75rem; color: var(--accent-purple); margin-bottom: 12px; display: block; letter-spacing: 0.05em;">PERFORMANCE</span>
+              <h3 class="text-serif" style="font-size: 3rem; line-height: 1; margin-bottom: 8px;">ROI de 4.2x</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: auto;">Média de retorno em clientes de e-commerce</p>
             </div>
             
-            <div class="db-metrics-grid">
-              <div class="db-metric-card">
-                <span class="db-metric-label">ROI Médio</span>
-                <span class="db-metric-value">4.2x</span>
-                <span class="db-metric-trend db-trend-up">▲ +14%</span>
-              </div>
-              <div class="db-metric-card">
-                <span class="db-metric-label">Conversão</span>
-                <span class="db-metric-value">4.8%</span>
-                <span class="db-metric-trend db-trend-up">▲ +8.2%</span>
-              </div>
+            <div class="bento-card" style="grid-column: span 6; padding: 24px; min-height: 160px; background: rgba(52, 211, 153, 0.02); border-color: rgba(52, 211, 153, 0.05);">
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--accent-green); margin-bottom: 12px; display: block; letter-spacing: 0.05em;">ESCALA</span>
+              <h3 class="text-serif" style="font-size: 2.2rem; line-height: 1; margin-bottom: 6px;">+180%</h3>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: auto;">leads qualificados</p>
             </div>
 
-            <div class="db-chart-container">
-              <svg viewBox="0 0 400 150" class="db-chart-svg">
-                <defs>
-                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="var(--accent-purple)" stop-opacity="0.2"/>
-                    <stop offset="100%" stop-color="var(--accent-purple)" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <!-- Grid Lines -->
-                <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
-                <line x1="0" y1="75" x2="400" y2="75" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
-                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(15, 23, 42, 0.05)" stroke-dasharray="4"/>
-                
-                <!-- Chart Area Path -->
-                <path d="M 0 130 C 60 110, 100 50, 160 60 C 220 70, 260 20, 320 30 C 360 35, 380 15, 400 10 L 400 150 L 0 150 Z" fill="url(#chartGradient)"/>
-                
-                <!-- Chart Line Path -->
-                <path d="M 0 130 C 60 110, 100 50, 160 60 C 220 70, 260 20, 320 30 C 360 35, 380 15, 400 10" fill="none" stroke="var(--accent-purple)" stroke-width="3" stroke-linecap="round"/>
-                
-                <!-- Dots on key nodes -->
-                <circle cx="160" cy="60" r="5" fill="var(--accent-purple)" stroke="#ffffff" stroke-width="2"/>
-                <circle cx="320" cy="30" r="5" fill="var(--accent-purple)" stroke="#ffffff" stroke-width="2"/>
-                <circle cx="400" cy="10" r="5" fill="var(--accent-cyan)" stroke="#ffffff" stroke-width="2"/>
-              </svg>
-            </div>
-
-            <div class="db-footer">
-              <span class="db-footer-txt">Faturamento Gerado: <strong>R$ 124.500</strong></span>
-              <span class="db-footer-txt" style="color: var(--accent-green); font-weight:600;">Meta Atingida</span>
+            <div class="bento-card" style="grid-column: span 6; padding: 24px; min-height: 160px; transform: translateZ(10px);">
+              <span class="text-mono" style="font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 12px; display: block; letter-spacing: 0.05em;">ESTÉTICA</span>
+              <h3 class="text-serif" style="font-size: 2.2rem; line-height: 1; margin-bottom: 6px;">Top 1%</h3>
+              <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: auto;">design & branding</p>
             </div>
           </div>
         </div>
@@ -140,13 +106,13 @@
             <img src="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-quadrado-fundo-preto_88de8c17-ab4f-4ac5-bd31-09e2a251e6c6.png?v=1756218817" alt="Dhera Brand Logo">
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #0f766e; letter-spacing: -0.03em;">Lumina</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #ffffff; opacity: 0.7; letter-spacing: -0.03em;">Lumina</h3>
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #1d4ed8; letter-spacing: -0.03em;">Vertex</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #ffffff; opacity: 0.7; letter-spacing: -0.03em;">Vertex</h3>
           </div>
           <div class="brand-item">
-            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #c2410c; letter-spacing: -0.03em;">Kaizen</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #ffffff; opacity: 0.7; letter-spacing: -0.03em;">Kaizen</h3>
           </div>
         </div>
       </div>
@@ -156,8 +122,8 @@
     <section class="section">
       <div class="container">
         <div class="section-header center reveal">
-          <span class="text-mono">Metodologia e Fatos</span>
-          <h2>O Básico Bem Feito <span class="gradient-text">Gera Escala.</span></h2>
+          <span class="text-mono" style="letter-spacing: 0.1em; color: var(--text-secondary);">Metodologia e Fatos</span>
+          <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); margin-top: 15px;">O Básico Bem Feito <span class="text-serif-italic" style="color: var(--accent-purple);">Gera Escala.</span></h2>
           <p>Não vendemos fórmulas mágicas. Aplicamos design estratégico impecável e engenharia de dados focada em retorno. Os números falam por nós.</p>
         </div>
 
