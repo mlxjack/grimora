@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato & Briefing | Grimora</title>
+  <meta name="description" content="Entre em contato com a Grimora. Preencha nosso briefing interativo e dê o primeiro passo para acelerar o crescimento da sua marca.">
+  <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-grimora-fundo-preto.png?v=1768012377">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Scoped Styles for Contact Page Form elements */
+    .form-group {
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .form-label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: var(--transition-smooth);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-purple);
+      background: rgba(159, 51, 255, 0.02);
+      box-shadow: 0 0 15px rgba(159, 51, 255, 0.1);
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .checkbox-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition-smooth);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .checkbox-card input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkbox-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .checkbox-card.selected {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 245, 255, 0.05);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 245, 255, 0.1);
+    }
+    .budget-slider-container {
+      margin-top: 15px;
+      padding: 20px;
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+    }
+    .budget-options {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 576px) {
+      .budget-options {
+        grid-template-columns: 1fr;
+      }
+    }
+    .budget-option {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .budget-option:hover {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .budget-option.selected {
+      background: rgba(159, 51, 255, 0.1);
+      border-color: var(--accent-purple);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Background System -->
+  <div class="bg-ambient">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+  </div>
+  <div class="noise-overlay"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img class="logo-img" src="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-grimora-fundo-preto.png?v=1768012377" alt="Grimora Logo">
+      </a>
+      
+      <button class="nav-toggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Início</a></li>
+        <li><a href="agencia.html" class="nav-link">Agência</a></li>
+        <li><a href="cases.html" class="nav-link">Cases</a></li>
+        <li><a href="servicos.html" class="nav-link">Expertise</a></li>
+        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+        <li class="nav-cta">
+          <a href="contato.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.8rem;">Briefing</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="padding-top: 120px;">
+    <section class="section">
+      <div class="container grid-2" style="align-items: flex-start; gap: 80px;">
+        <!-- Left Side: Info -->
+        <div class="reveal">
+          <span class="text-mono">Briefing de Projeto</span>
+          <h1 style="margin-top: 15px;">Vamos iniciar uma <span class="gradient-text">parceria de escala.</span></h1>
+          <p style="margin-top: 25px; margin-bottom: 40px; font-size: 1.1rem;">
+            Preencha o formulário ao lado com as informações básicas do seu negócio. Nosso time de estrategistas fará um diagnóstico prévio gratuito dos seus canais antes da nossa primeira reunião de alinhamento.
+          </p>
+          
+          <div style="display:flex; flex-direction:column; gap: 30px;">
+            <div style="display:flex; gap: 20px; align-items: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0, 245, 255, 0.05); border:1px solid rgba(0, 245, 255, 0.2); display:flex; align-items:center; justify-content:center; color: var(--accent-cyan);">
+                <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 0.95rem; color: #fff; margin-bottom:3px;">Contato Comercial</h4>
+                <p style="font-size: 0.9rem;">publicidadegrimora@gmail.com</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap: 20px; align-items: center;">
+              <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(159, 51, 255, 0.05); border:1px solid rgba(159, 51, 255, 0.2); display:flex; align-items:center; justify-content:center; color: var(--accent-purple);">
+                <svg style="width:20px; height:20px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 style="font-size: 0.95rem; color: #fff; margin-bottom:3px;">Tempo de Resposta</h4>
+                <p style="font-size: 0.9rem;">Análise técnica de cenário entregue em até 24h úteis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interative Form inside Glass Card -->
+        <div class="card-glass reveal delay-200" style="padding: 50px 40px; width: 100%;">
+          <form id="briefing-form" onsubmit="handleBriefingSubmit(event)">
+            
+            <div class="form-group">
+              <label class="form-label" for="client-name">Seu Nome</label>
+              <input class="form-control" type="text" id="client-name" required placeholder="Ex: Roberto Silva">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="client-email">E-mail Corporativo</label>
+              <input class="form-control" type="email" id="client-email" required placeholder="Ex: roberto@empresa.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="client-company">Sua Empresa</label>
+              <input class="form-control" type="text" id="client-company" required placeholder="Ex: Nome da sua Empresa">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Serviços Necessários</label>
+              <div class="checkbox-grid">
+                <div class="checkbox-card" onclick="toggleServiceBadge(this)">
+                  <input type="checkbox" name="services" value="Branding">
+                  Branding & Design
+                </div>
+                <div class="checkbox-card" onclick="toggleServiceBadge(this)">
+                  <input type="checkbox" name="services" value="Mídia Paga">
+                  Tráfego & Ads
+                </div>
+                <div class="checkbox-card" onclick="toggleServiceBadge(this)">
+                  <input type="checkbox" name="services" value="Desenvolvimento Web">
+                  Dev Web / Landing Pages
+                </div>
+                <div class="checkbox-card" onclick="toggleServiceBadge(this)">
+                  <input type="checkbox" name="services" value="Consultoria">
+                  Mentoria & Escala
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Orçamento Estimado Mensal</label>
+              <div class="budget-options">
+                <div class="budget-option" onclick="selectBudget(this, 'Até R$ 5k')">Até R$ 5.000</div>
+                <div class="budget-option" onclick="selectBudget(this, 'R$ 5k - 15k')">R$ 5k a R$ 15k</div>
+                <div class="budget-option" onclick="selectBudget(this, 'R$ 15k - 30k')">R$ 15k a R$ 30k</div>
+                <div class="budget-option" onclick="selectBudget(this, 'Acima de R$ 30k')">R$ 30k+</div>
+              </div>
+              <input type="hidden" id="estimated-budget" value="">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="client-message">Conte-nos brevemente sobre o projeto</label>
+              <textarea class="form-control" id="client-message" rows="4" placeholder="Quais são os principais desafios de vendas e comunicação que você busca solucionar hoje?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+              Enviar Proposta de Briefing
+              <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo footer-logo">
+          <img class="logo-img" src="https://cdn.shopify.com/s/files/1/0709/2181/4289/files/logo-grimora-fundo-preto.png?v=1768012377" alt="Grimora Logo">
+        </a>
+        <p class="footer-description">A Grimora conecta design arrojado a métricas robustas de crescimento para posicionar marcas e redefinir categorias no digital.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 1.5a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="agencia.html">A Agência</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="servicos.html">Expertise</a></li>
+          <li><a href="contato.html">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Expertise</h4>
+        <ul class="footer-links">
+          <li><a href="servicos.html">Branding & Design</a></li>
+          <li><a href="servicos.html">Mídia & Performance</a></li>
+          <li><a href="servicos.html">Dev High-End</a></li>
+          <li><a href="servicos.html">SEO & Conteúdo</a></li>
+          <li><a href="servicos.html">Consultoria de Escala</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contato</h4>
+        <ul class="footer-contact-info">
+          <li>
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>publicidadegrimora@gmail.com</span>
+          </li>
+          <li>
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>São Paulo, SP<br>Brasil</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Grimora. Todos os direitos reservados. Design & Tech by Grimora.</p>
+      <p class="text-mono" style="font-size: 0.7rem;">BUILDING THE FUTURE OF BRANDS</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Toggle checkcard badges
+    function toggleServiceBadge(card) {
+      card.classList.toggle('selected');
+      const input = card.querySelector('input[type="checkbox"]');
+      input.checked = !input.checked;
+    }
+
+    // Select budget options
+    function selectBudget(optionElement, budgetVal) {
+      document.querySelectorAll('.budget-option').forEach(el => {
+        el.classList.remove('selected');
+      });
+      optionElement.classList.add('selected');
+      document.getElementById('estimated-budget').value = budgetVal;
+    }
+
+    // Handle form submit dynamically generating mailto
+    function handleBriefingSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('client-name').value;
+      const email = document.getElementById('client-email').value;
+      const company = document.getElementById('client-company').value;
+      const message = document.getElementById('client-message').value;
+      const budget = document.getElementById('estimated-budget').value || 'Não informado';
+      
+      // Selected services
+      const services = [];
+      document.querySelectorAll('input[name="services"]:checked').forEach(cb => {
+        services.push(cb.value);
+      });
+      const servicesText = services.length > 0 ? services.join(', ') : 'Não especificado';
+
+      const emailSubject = `Grimora - Briefing de Projeto (${company})`;
+      const emailBody = `Olá Grimora,\n\nGostaria de solicitar uma proposta de projeto para a minha empresa.\n\n` +
+                        `✦ Nome do Contato: ${name}\n` +
+                        `✦ E-mail de Contato: ${email}\n` +
+                        `✦ Empresa: ${company}\n` +
+                        `✦ Serviços de Interesse: ${servicesText}\n` +
+                        `✦ Orçamento Mensal Estimado: ${budget}\n\n` +
+                        `✦ Descrição do Projeto / Desafios:\n${message}\n\n` +
+                        `Aguardo contato técnico para agendamento de reunião.`;
+
+      // Open mailto
+      const mailtoUrl = `mailto:publicidadegrimora@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+</html>
