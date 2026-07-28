@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0B0D">
+
+  <!-- ==========================================================
+       SEO — TROCAR: ajuste title/description e o domínio final
+       ========================================================== -->
+  <title>Grimora | Departamento de marketing completo para a sua empresa</title>
+  <meta name="description" content="A Grimora é o departamento de marketing terceirizado da sua empresa: estratégia, design, conteúdo, tráfego pago, sites e campanhas sob um único comando.">
+  <meta name="author" content="Grimora">
+  <meta name="robots" content="index, follow">
+  <!-- TROCAR: domínio final do site -->
+  <link rel="canonical" href="https://www.grimora.com.br/">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Grimora">
+  <meta property="og:url" content="https://www.grimora.com.br/">
+  <meta property="og:title" content="Grimora | Departamento de marketing completo para a sua empresa">
+  <meta property="og:description" content="Estratégia, design, conteúdo, tecnologia e campanhas em um só lugar. Um único ponto de contato no lugar de cinco fornecedores.">
+  <!-- TROCAR: imagem de compartilhamento. O ideal é uma arte 1200x630px
+       (logo + headline sobre fundo escuro) salva em assets/img/og-grimora.jpg.
+       Enquanto não existir, usamos o logo quadrado — funciona, mas aparece cortado
+       em alguns previews. -->
+  <meta property="og:image" content="assets/img/logo-grimora-branco.png">
+  <meta property="og:image:alt" content="Grimora — agência de marketing e publicidade">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grimora | Departamento de marketing completo">
+  <meta name="twitter:description" content="Estratégia, design, conteúdo, tecnologia e campanhas em um só lugar.">
+  <meta name="twitter:image" content="assets/img/logo-grimora-branco.png">
+
+  <!-- Favicon — logo em branco (versão para fundo escuro), servido pelo próprio site.
+       TROCAR (opcional): gere um favicon.ico/PNG recortado só na árvore, fica mais
+       legível nos 16x16 da aba do navegador. -->
+  <link rel="icon" type="image/png" href="assets/img/logo-grimora-branco.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-grimora-branco.png">
+
+  <!-- Fontes: 2 famílias apenas.
+       Cormorant Garamond = serifa clássica de alto contraste, ecoando o wordmark do logo.
+       Inter = leitura confortável em corpo de texto. display=swap evita bloqueio de render. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Dados estruturados (ajuda o Google a entender o negócio) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Grimora",
+    "description": "Departamento de marketing terceirizado: estratégia, design, conteúdo, tecnologia e campanhas.",
+    "url": "https://www.grimora.com.br/",
+    "email": "publicidadegrimora@gmail.com",
+    "telephone": "+5511945948096",
+    "areaServed": "BR",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressCountry": "BR" }
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Link de acessibilidade: aparece só ao navegar por teclado -->
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+
+<!-- ============================================================
+     HEADER / NAVEGAÇÃO
+     ============================================================ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+
+    <!-- LOGO NO HEADER
+         O arquivo do logo é quadrado (árvore + wordmark empilhados), o que fica pequeno
+         demais numa barra de navegação. Por isso o header exibe só o símbolo da árvore
+         (recorte feito por CSS em .brand__mark) ao lado do nome em texto.
+         TROCAR: se você gerar uma versão horizontal do logo, troque este bloco inteiro por
+         uma única <img src="assets/img/logo-grimora-horizontal.svg" alt="Grimora"> e apague
+         as regras .brand__mark / .brand__word do styles.css. -->
+    <a class="brand" href="#topo" aria-label="Grimora — início">
+      <span class="brand__mark" aria-hidden="true">
+        <img src="assets/img/logo-grimora-branco.png" alt="" width="1080" height="1080">
+      </span>
+      <span class="brand__word">Grimora</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#sobre">Sobre</a></li>
+        <li><a class="nav__link" href="#servicos">Serviços</a></li>
+        <li><a class="nav__link" href="#solucoes">Soluções</a></li>
+        <li><a class="nav__link" href="#diferencial">Diferencial</a></li>
+        <li><a class="nav__link" href="#cases">Cases</a></li>
+        <li><a class="nav__link nav__link--cta" href="#contato">Fale com a Grimora</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <!-- ============================================================
+       1. HERO
+       ============================================================ -->
+  <section class="hero" id="topo">
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">Departamento de marketing terceirizado</p>
+
+      <h1 class="hero__title reveal">
+        Sua empresa precisa de um departamento de marketing.<br>
+        <span class="grad">Não de montar um.</span>
+      </h1>
+
+      <p class="hero__sub reveal">
+        Estratégia, design, conteúdo, tecnologia e campanhas sob um único comando.
+        A Grimora assume a operação de marketing do seu negócio — do planejamento à
+        peça que vai ao ar — sem que você precise contratar e coordenar cinco fornecedores diferentes.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="#contato">Fale com a Grimora</a>
+        <a class="btn btn--ghost" href="#solucoes">Ver soluções</a>
+      </div>
+
+      <ul class="hero__stats reveal" aria-label="Resumo da proposta">
+        <li><strong>12</strong><span>frentes de marketing cobertas</span></li>
+        <li><strong>1</strong><span>ponto de contato do briefing à entrega</span></li>
+        <li><strong>0</strong><span>fornecedores para você gerenciar</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       2. SOBRE A GRIMORA
+       ============================================================ -->
+  <section class="section" id="sobre">
+    <div class="container grid-2">
+
+      <div class="reveal">
+        <p class="eyebrow">Sobre a Grimora</p>
+        <h2 class="section__title">Do planejamento estratégico à execução final.</h2>
+        <p class="lead">
+          A Grimora nasceu de uma constatação simples: a maior parte das empresas não tem
+          problema de criatividade — tem problema de coordenação. Estratégia em um lugar,
+          design em outro, texto com um terceiro e o site com quem ninguém consegue falar.
+        </p>
+        <p>
+          Aqui, tudo isso acontece dentro da mesma cabeça. Marketing, design, conteúdo,
+          tecnologia e comunicação comercial operam de forma integrada, com o mesmo
+          entendimento do seu negócio, do seu cliente e da sua margem. O resultado é
+          uma comunicação que não se contradiz e um cronograma que não trava.
+        </p>
+      </div>
+
+      <div class="reveal reveal--delay">
+        <ul class="checklist">
+          <li>
+            <h3>Um interlocutor, escopo completo</h3>
+            <p>Você explica uma vez. O briefing não se perde entre agência, freela e fornecedor.</p>
+          </li>
+          <li>
+            <h3>Estratégia antes de arte</h3>
+            <p>Nenhuma peça é produzida sem um objetivo comercial claro por trás dela.</p>
+          </li>
+          <li>
+            <h3>Execução de ponta a ponta</h3>
+            <p>Do posicionamento ao anúncio no ar, do catálogo ao e-commerce publicado.</p>
+          </li>
+          <li>
+            <h3>Estrutura de agência, agilidade de time interno</h3>
+            <p>Sem camadas de aprovação, sem reunião para marcar reunião.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       3. SERVIÇOS (12 blocos)
+       ============================================================ -->
+  <section class="section section--alt" id="servicos">
+    <div class="container">
+
+      <header class="section__head reveal">
+        <p class="eyebrow">Serviços</p>
+        <h2 class="section__title">Tudo que um departamento de marketing precisa entregar.</h2>
+        <p class="lead">Contrate uma frente específica ou a operação inteira.</p>
+      </header>
+
+      <div class="cards">
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+          </span>
+          <h3 class="card__title">Estratégia e Posicionamento</h3>
+          <p>Diagnóstico do negócio, definição de público, proposta de valor e território de marca. O plano que orienta todas as outras entregas.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18h1.5a2 2 0 0 0 1.4-3.4 2 2 0 0 1 1.4-3.4H19a2 2 0 0 0 2-2A9 9 0 0 0 12 3z"/><circle cx="8" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="7.5" r="1" fill="currentColor"/><circle cx="16" cy="10" r="1" fill="currentColor"/></svg>
+          </span>
+          <h3 class="card__title">Direção de Arte e Design</h3>
+          <p>Identidade visual, sistema gráfico e padrão de qualidade aplicado a tudo: da embalagem ao story, do catálogo ao anúncio.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.3 8.3 0 0 1-.9-3.8 8.4 8.4 0 0 1 8.4-8.4 8.4 8.4 0 0 1 8.6 7.7z"/></svg>
+          </span>
+          <h3 class="card__title">Gestão de Redes Sociais</h3>
+          <p>Planejamento de pauta, produção de conteúdo, publicação e acompanhamento. Perfil ativo com linha editorial, não com post aleatório.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg>
+          </span>
+          <h3 class="card__title">Textos e Comunicação Comercial</h3>
+          <p>Copy de venda, descrição de produto, e-mail, roteiro e argumentário. Texto que informa, posiciona e move o cliente para a próxima etapa.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l17-7-3 17-4.5-5.5L3 11z"/><path d="M12.5 15.5L9 19v-5.5"/></svg>
+          </span>
+          <h3 class="card__title">Campanhas e Lançamentos</h3>
+          <p>Datas comerciais, promoções e entrada de produto novo: conceito, calendário, peças e disparo coordenado em todos os canais.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="4" y="12" width="3.5" height="6" rx="1"/><rect x="10.2" y="8" width="3.5" height="10" rx="1"/><rect x="16.5" y="4" width="3.5" height="14" rx="1"/></svg>
+          </span>
+          <h3 class="card__title">Tráfego Pago</h3>
+          <p>Meta Ads e Google Ads com estrutura de campanha, criativos próprios e leitura de resultado. Verba investida com hipótese, não com achismo.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M3 9h18"/><circle cx="6.2" cy="6.5" r=".6" fill="currentColor"/><circle cx="8.4" cy="6.5" r=".6" fill="currentColor"/></svg>
+          </span>
+          <h3 class="card__title">Sites e Landing Pages</h3>
+          <p>Sites institucionais, páginas de captura e projetos digitais sob medida. Rápidos, responsivos e construídos para converter.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1.3 11.2A2 2 0 0 1 16.7 20H7.3a2 2 0 0 1-2-1.8L4 7z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></svg>
+          </span>
+          <h3 class="card__title">E-commerce</h3>
+          <p>Loja estruturada de verdade: catálogo organizado, fotos padronizadas, páginas de produto que vendem e integração com o operacional.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9.5 12h6M9.5 15.5h6"/></svg>
+          </span>
+          <h3 class="card__title">Catálogos e Materiais Comerciais</h3>
+          <p>Catálogo digital, tabela de preços, apresentação de linha e kit de vendas — material que o seu time comercial usa sem improvisar.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 13h6v8"/><path d="M6.5 12h2M6.5 15.5h2M18 16.5h1.5"/></svg>
+          </span>
+          <h3 class="card__title">Marketing para Lojistas e B2B</h3>
+          <p>Comunicação para quem vende para revenda: captação de lojista, material de representante e argumento de margem.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 11l6-3.2v8.4l-6-3.2z"/></svg>
+          </span>
+          <h3 class="card__title">Produção e Edição de Vídeo</h3>
+          <p>Reels, vídeos de produto, institucionais e criativos para anúncio. Roteiro, edição, legenda e corte adaptado a cada canal.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9.5 12.5h.01M14.5 12.5h.01M9.5 16h5"/><path d="M2.5 11.5v3M21.5 11.5v3"/></svg>
+          </span>
+          <h3 class="card__title">IA Aplicada ao Marketing</h3>
+          <p>Uso de inteligência artificial para acelerar produção, escalar variações de criativo e automatizar rotinas — com curadoria humana em cima.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       4. SOLUÇÕES / PACOTES
+       ============================================================ -->
+  <section class="section" id="solucoes">
+    <div class="container">
+
+      <header class="section__head reveal">
+        <p class="eyebrow">Soluções</p>
+        <h2 class="section__title">Quatro formas de colocar a Grimora para trabalhar.</h2>
+        <p class="lead">Escopos fechados, com começo, meio e entrega definidos.</p>
+      </header>
+
+      <div class="plans">
+
+        <!-- Pacote 1 -->
+        <article class="plan plan--featured reveal">
+          <span class="plan__badge">Mais contratado</span>
+          <h3 class="plan__title">Gestão Mensal de Marketing</h3>
+          <p class="plan__desc">A operação completa rodando todo mês, com calendário definido e prestação de contas.</p>
+          <ul class="plan__list">
+            <li>Planejamento mensal e calendário de conteúdo</li>
+            <li>Criação e publicação nas redes sociais</li>
+            <li>Gestão de tráfego pago e otimização de campanhas</li>
+            <li>Peças para datas comerciais e promoções</li>
+            <li>Relatório de resultados e ajuste de rota</li>
+          </ul>
+          <!-- data-proposta preenche automaticamente o formulário de contato (ver script.js) -->
+          <button class="btn btn--primary plan__cta" data-proposta="Gestão Mensal de Marketing">Solicitar proposta</button>
+        </article>
+
+        <!-- Pacote 2 -->
+        <article class="plan reveal">
+          <h3 class="plan__title">Estruturação de Marketing</h3>
+          <p class="plan__desc">Para quem está começando do zero ou nunca organizou a comunicação da empresa.</p>
+          <ul class="plan__list">
+            <li>Diagnóstico e definição de posicionamento</li>
+            <li>Identidade visual e padrão de comunicação</li>
+            <li>Criação e organização dos canais digitais</li>
+            <li>Materiais comerciais essenciais</li>
+            <li>Plano de marketing para os próximos meses</li>
+          </ul>
+          <button class="btn btn--ghost plan__cta" data-proposta="Estruturação de Marketing">Solicitar proposta</button>
+        </article>
+
+        <!-- Pacote 3 -->
+        <article class="plan reveal">
+          <h3 class="plan__title">Campanhas de Lançamento</h3>
+          <p class="plan__desc">Projeto pontual para colocar um produto, uma linha ou uma promoção no mercado.</p>
+          <ul class="plan__list">
+            <li>Conceito criativo e nome da campanha</li>
+            <li>Peças para redes, anúncios, e-mail e PDV</li>
+            <li>Landing page ou página de produto dedicada</li>
+            <li>Plano de mídia e cronograma de disparo</li>
+            <li>Acompanhamento durante todo o período</li>
+          </ul>
+          <button class="btn btn--ghost plan__cta" data-proposta="Campanha de Lançamento">Solicitar proposta</button>
+        </article>
+
+        <!-- Pacote 4 -->
+        <article class="plan reveal">
+          <h3 class="plan__title">Captação de Lojistas</h3>
+          <p class="plan__desc">Para indústrias e distribuidores que precisam ampliar a rede de revenda.</p>
+          <ul class="plan__list">
+            <li>Oferta e argumentário de margem para o lojista</li>
+            <li>Catálogo e apresentação comercial</li>
+            <li>Campanhas segmentadas para público B2B</li>
+            <li>Página de cadastro e qualificação de leads</li>
+            <li>Material de apoio para representantes</li>
+          </ul>
+          <button class="btn btn--ghost plan__cta" data-proposta="Captação de Lojistas">Solicitar proposta</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       5. POR QUE A GRIMORA (diferencial)
+       ============================================================ -->
+  <section class="section section--alt" id="diferencial">
+    <div class="container">
+
+      <header class="section__head reveal">
+        <p class="eyebrow">Por que a Grimora</p>
+        <h2 class="section__title">O custo invisível de contratar por partes.</h2>
+      </header>
+
+      <div class="compare">
+
+        <div class="compare__col reveal">
+          <h3 class="compare__head compare__head--bad">Contratando separado</h3>
+          <ul class="compare__list compare__list--bad">
+            <li>Um estrategista, um designer, um redator, um gestor de tráfego e um dev</li>
+            <li>Cinco versões do mesmo briefing — e cinco entendimentos diferentes</li>
+            <li>A identidade visual muda de mão em mão</li>
+            <li>Ninguém assume o resultado final, cada um entrega a sua parte</li>
+            <li>Você vira o gerente de projeto sem ter pedido</li>
+          </ul>
+        </div>
+
+        <div class="compare__col compare__col--good reveal reveal--delay">
+          <h3 class="compare__head compare__head--good">Com a Grimora</h3>
+          <ul class="compare__list compare__list--good">
+            <li>Um profissional que entende o negócio antes de propor qualquer peça</li>
+            <li>Estratégia, identidade, texto, campanha e canais na mesma mão</li>
+            <li>Coerência automática: tudo nasce do mesmo raciocínio</li>
+            <li>Uma responsabilidade só sobre o resultado</li>
+            <li>Você aprova e acompanha — não coordena</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="compare__note reveal">
+        Não é sobre fazer mais barato. É sobre fazer sem ruído — com alguém que
+        conhece o seu produto, a sua margem e o seu cliente, e não precisa ser
+        reapresentado ao negócio a cada nova demanda.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       6. PORTFÓLIO / CASES  (placeholders)
+       TROCAR: substitua cada <div class="case__media"> por uma imagem real:
+       <img class="case__media" src="assets/img/case-01.jpg" alt="Descrição do case"
+            loading="lazy" width="800" height="600">
+       Recomendado: JPG/WebP com no máx. 1600px de largura e ~200KB.
+       ============================================================ -->
+  <section class="section" id="cases">
+    <div class="container">
+
+      <header class="section__head reveal">
+        <p class="eyebrow">Portfólio</p>
+        <h2 class="section__title">Projetos em produção.</h2>
+        <p class="lead">Seleção de trabalhos sendo preparada para publicação.</p>
+      </header>
+
+      <div class="cases">
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">Identidade visual</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">E-commerce</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">Campanha de lançamento</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">Tráfego pago</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">Catálogo comercial</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+        <article class="case reveal">
+          <div class="case__media" aria-hidden="true"><span>Case em breve</span></div>
+          <div class="case__body">
+            <p class="case__cat">Site institucional</p>
+            <h3 class="case__title">Case em breve</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       7. PROVA SOCIAL / DEPOIMENTOS
+       TROCAR: os três depoimentos abaixo são placeholders.
+       Substitua o texto, o nome, o cargo e a empresa por depoimentos reais.
+       Se ainda não tiver nenhum, remova a seção inteira (deste comentário
+       até o fechamento </section>) em vez de publicar texto fictício.
+       ============================================================ -->
+  <section class="section section--alt" id="depoimentos">
+    <div class="container">
+
+      <header class="section__head reveal">
+        <p class="eyebrow">Prova social</p>
+        <h2 class="section__title">O que dizem os clientes.</h2>
+      </header>
+
+      <div class="quotes">
+
+        <figure class="quote reveal">
+          <blockquote>Espaço reservado para depoimento. Descreva em duas ou três linhas o problema que o cliente tinha antes e o que mudou depois do trabalho.</blockquote>
+          <figcaption>
+            <strong>Nome do cliente</strong>
+            <span>Cargo · Empresa</span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <blockquote>Espaço reservado para depoimento. Depoimentos com número — prazo, faturamento, volume de pedidos — convencem mais do que elogios genéricos.</blockquote>
+          <figcaption>
+            <strong>Nome do cliente</strong>
+            <span>Cargo · Empresa</span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <blockquote>Espaço reservado para depoimento. Se possível, peça autorização para usar o nome e o logo da empresa junto ao texto.</blockquote>
+          <figcaption>
+            <strong>Nome do cliente</strong>
+            <span>Cargo · Empresa</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       8. CONTATO
+       ============================================================ -->
+  <section class="section" id="contato">
+    <div class="container grid-2 grid-2--contact">
+
+      <div class="reveal">
+        <p class="eyebrow">Contato</p>
+        <h2 class="section__title">Conte o que a sua empresa precisa resolver.</h2>
+        <p class="lead">
+          Responda em uma frase ou em cinco parágrafos — o que importa é entender o
+          contexto. O retorno vem com uma leitura inicial do cenário e o próximo passo sugerido.
+        </p>
+
+        <ul class="contact-info">
+          <li>
+            <span class="contact-info__label">WhatsApp</span>
+            <!-- TROCAR (se mudar o número): atualize aqui e no bloco CONFIG do script.js -->
+            <a href="https://wa.me/5511945948096" target="_blank" rel="noopener">(11) 94594-8096</a>
+          </li>
+          <li>
+            <span class="contact-info__label">E-mail</span>
+            <a href="mailto:publicidadegrimora@gmail.com">publicidadegrimora@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-info__label">Atendimento</span>
+            <span>Todo o Brasil, remoto · Seg a sex, 9h às 18h</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ------------------------------------------------------------------
+           FORMULÁRIO
+           Hoje o envio é montado em JavaScript e aberto no WhatsApp (funciona
+           sem backend). Para integrar com e-mail/CRM depois, veja os blocos
+           comentados em script.js → função handleSubmit().
+           ------------------------------------------------------------------ -->
+      <div class="form-wrap reveal reveal--delay">
+        <form class="form" id="contatoForm" novalidate>
+
+          <div class="field">
+            <label for="nome">Nome <span aria-hidden="true">*</span></label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como você se chama">
+            <small class="field__error" data-error-for="nome"></small>
+          </div>
+
+          <div class="field">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br">
+              <small class="field__error" data-error-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="whatsapp">WhatsApp <span aria-hidden="true">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" required inputmode="numeric" placeholder="(11) 90000-0000">
+              <small class="field__error" data-error-for="whatsapp"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="O que a sua empresa vende, qual o cenário atual e o que você precisa resolver."></textarea>
+            <small class="field__error" data-error-for="mensagem"></small>
+          </div>
+
+          <!-- Campo anti-spam: invisível para pessoas, preenchido por robôs -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="site">Não preencha este campo</label>
+            <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Enviar para a Grimora</button>
+
+          <p class="form__note">Ao enviar, a mensagem é aberta no WhatsApp já preenchida. Seus dados não são armazenados neste site.</p>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ============================================================
+     9. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <!-- No rodapé cabe o logo completo (árvore + wordmark), que é a versão oficial.
+           TROCAR: o arquivo em assets/img/ caso você atualize a arte do logo. -->
+      <img class="footer__logo" src="assets/img/logo-grimora-branco.png" alt="Grimora — Creative Advertising Agency" width="1080" height="1080" loading="lazy" decoding="async">
+      <p>Departamento de marketing terceirizado. Estratégia, design, conteúdo, tecnologia e campanhas sob um único comando.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Navegação do rodapé">
+      <h3>Navegação</h3>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h3>Contato</h3>
+      <ul>
+        <li><a href="https://wa.me/5511945948096" target="_blank" rel="noopener">(11) 94594-8096</a></li>
+        <li><a href="mailto:publicidadegrimora@gmail.com">publicidadegrimora@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <!-- TROCAR: coloque as URLs reais das redes sociais nos href="#" abaixo.
+         Se não usar alguma rede, apague o <li> correspondente. -->
+    <div class="footer__col">
+      <h3>Redes</h3>
+      <ul class="footer__social">
+        <li>
+          <a href="#" aria-label="Instagram da Grimora">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="LinkedIn da Grimora">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="YouTube da Grimora">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8M10 15V9l5.2 3-5.2 3z"/></svg>
+            <span>YouTube</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="ano">2026</span> Grimora. Todos os direitos reservados.</p>
+    <p class="footer__sign">Marketing, design e tecnologia sob um único comando.</p>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     BOTÃO FLUTUANTE DE WHATSAPP
+     TROCAR (se mudar o número): href abaixo + bloco CONFIG do script.js
+     ============================================================ -->
+<a class="wa-float" href="https://wa.me/5511945948096?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Grimora%20e%20gostaria%20de%20conversar."
+   target="_blank" rel="noopener" aria-label="Falar com a Grimora no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24m-3.7 4.1c-.17 0-.45.06-.69.31-.24.25-.9.88-.9 2.15s.93 2.5 1.06 2.67c.13.17 1.81 2.77 4.39 3.88.61.27 1.09.42 1.47.54.62.2 1.18.17 1.62.1.5-.07 1.52-.62 1.73-1.22.21-.6.21-1.12.15-1.22-.06-.11-.24-.17-.5-.3-.25-.12-1.51-.75-1.75-.83-.23-.09-.4-.13-.57.12-.17.26-.65.83-.8 1-.14.17-.29.19-.54.06-.25-.12-1.07-.39-2.04-1.26-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.24-.42.09-.17.04-.32-.02-.44-.06-.13-.55-1.4-.78-1.9-.19-.42-.38-.42-.55-.43h-.47z"/></svg>
+</a>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>

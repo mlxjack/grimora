@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TROCAR: domínio final do site
+Sitemap: https://www.grimora.com.br/sitemap.xml
